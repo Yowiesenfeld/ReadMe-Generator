@@ -53,8 +53,44 @@ const questions = [
 ];
 
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// this function creates a readme based on users input
+function generateReadmeContent(answers) {
+    return `
+  # ${answers.title}
+  
+  ## Description
+  ${answers.description}
+  
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  
+  ## Installation
+  ${answers.installation}
+  
+  ## Usage
+  ${answers.usage}
+  
+  ## License
+  This project is covered under the ${answers.license} license.
+  
+  ## Contributing
+  ${answers.contribution}
+  
+  ## Tests
+  ${answers.tests}
+  
+  ## Questions
+  For additional questions, you can reach me at:
+  GitHub: [${answers.githubUsername}](https://github.com/${answers.githubUsername})
+  Email: ${answers.email}
+      `;
+  }
+  
 
 // TODO: Create a function to initialize app
 function init() {}
