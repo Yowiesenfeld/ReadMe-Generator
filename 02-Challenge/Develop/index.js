@@ -91,6 +91,16 @@ function generateReadmeContent(answers) {
       `;
   }
   
+  // Heres a function that writes the README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+      if (err) {
+        console.error('Error writing README file:', err);
+      } else {
+        console.log('README file generated successfully!');
+      }
+    });
+  }
 
 // TODO: Create a function to initialize app
 function init() {}
